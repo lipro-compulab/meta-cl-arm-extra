@@ -1,0 +1,65 @@
+= OpenEmbedded/Yocto BSP layer for CompuLab's ARM based platforms
+
+This layer provides support for CompuLab's ARM based platforms for
+use with OpenEmbedded and/or Yocto Freescale's BSP layer.
+
+This layer is an interim layer as long as CompuLab's BSP development
+results are not merged into Freescale's BSP layer.
+
+== Dependence
+
+This layer depends on:
+
+.Dependend Layers 
+[cols=">1s,1,3"]
+|===
+1.4+^.^|openembedded-core 2+|collection of OpenEmbedded core packages and features
+       |GIT         |git://github.com/openembedded/openembedded-core.git +
+                     git://git.openembedded.org/openembedded-core
+       |Project     |https://github.com/openembedded/openembedded-core +
+                     http://git.openembedded.org/openembedded-core
+       |Mailing list|http://lists.openembedded.org/mailman/listinfo/openembedded-core +
+                     NOTE: Use [OE-core] in subject to easy the processing
+1.4+^.^|meta-fsl-arm 2+|support for Freescale's ARM processors and board
+       |GIT         |git://git.yoctoproject.org/meta-fsl-arm +
+                     git://github.com/Freescale/meta-fsl-arm.git
+       |Project     |http://git.yoctoproject.org/cgit/cgit.cgi/meta-fsl-arm +
+                     https://github.com/Freescale/meta-fsl-arm
+       |Mailing list|https://lists.yoctoproject.org/listinfo/meta-freescale +
+                     Note: Use [meta-fsl-arm] in subject to easy the processing
+|===
+
+== Contributing
+
+To contribute to this layer you should send a pull request to this GitHub
+project or send the patches for review to the authors mailing address.
+
+Issue tracker::
+    https://github.com/lipro-compulab/meta-cl-arm-extra/issues
+
+Pull requests::
+    https://github.com/lipro-compulab/meta-cl-arm-extra/pulls
+
+Source code::
+    https://github.com/lipro-compulab/meta-cl-arm-extra
+
+When creating patches, please use something like:
+
+[source,console]
+$: git format-patch -s --subject-prefix='meta-cl-arm-extra][PATCH' origin
+
+When sending patches, please use something like:
+
+[source,console]
+$: git send-email --to rexut@users.noreply.github.com <generated patch>
+
+Patches are normally intended for the master branch.
+
+Patches for other branches should be sent separately so they can be tracked
+individually in Patchwork and should have the branch name in brackets.
+
+For example, use this to generate a patch for branch 'fido':
+
+[source,console]
+$: git format-patch -s \
+       --subject-prefix='lipro-compulab][meta-cl-arm-extra][fido][PATCH' -1
